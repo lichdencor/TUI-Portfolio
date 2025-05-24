@@ -1,0 +1,6 @@
+.ongoing-projects ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none; /* Optional: if you don’t want bullet points */
+}
+

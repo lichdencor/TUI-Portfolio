@@ -1,0 +1,66 @@
+.particular {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaciado entre el label y el valor */
+  margin-bottom: 8px;
+}
+
+.particular h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.particular p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px; /* espacio entre los íconos */
+  align-items: center;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.about-me-top {
+  display: flex;
+  flex-direction: column; /* default: stack on narrow screens */
+  gap: 16px;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Side-by-side on medium and larger screens */
+@media (min-width: 768px) {
+  .about-me-top {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .about-me-particulars {
+    margin-left: 24px;
+    flex: 1;
+  }
+}
+
+
