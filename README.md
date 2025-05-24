@@ -7,10 +7,12 @@ Now featuring a built-in terminal that simulates POSIX commands in Bash.
 
 ## Features
 
-- Simulated Bash-style terminal with basic POSIX-like commands (ls, cat, echo, grep, rm, touch)
-- Simulated Neofetch with Host OS browser, JS heap, Page uptime (resets after refresh)
+- Simulated Bash-style terminal with basic POSIX-like commands (`ls`, `cat`, `echo`, `grep`, `rm`, `touch`)
+- Simulated `neofetch` with host OS (browser), JS heap, and page uptime (resets on refresh)
 - Retro TUI-inspired UI, styled per page and component
-- Modular project and configuration context shells (ex. info-shell is invented, you could implement conmmanctl, python, etc)
+- Modular project and configuration context shells  
+  _(e.g., `info-shell` is custom; you could implement others like `conmmanctl`, `python`, etc.)_
+
 
 ## Live Demo
 
