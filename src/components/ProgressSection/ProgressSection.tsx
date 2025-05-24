@@ -29,7 +29,7 @@ export const ProgressSection = () => {
   ];
 
   useEffect(() => {
-    const animateProgressBar = (barId, value, duration = 1000) => {
+    const animateProgressBar = (barId: string, value: number, duration: number = 1000) => {
       const bar = document.getElementById(barId);
       if (bar) {
         const innerBar = bar.querySelector("div");

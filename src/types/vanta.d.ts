@@ -3,3 +3,8 @@ declare module "vanta/dist/vanta.net.min" {
   export default vantaNet;
 }
 
+declare module 'vanta/dist/vanta.rings.min.js' {
+  const RINGS: any;
+  export default RINGS;
+}
+

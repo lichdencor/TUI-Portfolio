@@ -21,12 +21,6 @@ function getBrowserInfo(): string {
   return info;
 }
 
-
-function getCPUInfo(): string {
-  const cores = navigator.hardwareConcurrency || "Unknown";
-  return `Logical cores: ${cores}`;
-}
-
 function getMemoryInfo(): string {
   // performance.memory is only available in Chrome-based browsers
   if ((performance as any).memory) {
