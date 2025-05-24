@@ -43,9 +43,9 @@ Check it out live here: [https://lichdencor.netlify.app](https://lichdencor.netl
    ```bash
    bun run dev
 
-```
-4. Visit  http://localhost:PORT (e.g., port 5173, 3000, etc.)
-```
+
+4. **Visit  http://localhost:PORT (e.g., port 5173, 3000, etc.)**
+
 
 ## License
 
