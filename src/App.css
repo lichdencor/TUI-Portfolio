@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', Courier, monospace;
+    font-size: 0.8em;
+    /* Default font size for larger screens */
+    line-height: 1.6;
+    /* Default line height */
+    background: black;
+    color: #00ff00;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #1898c1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img[src$=".svg"] {
+  width: 24px;
+  height: 24px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Larger screens - increase size */
+@media (min-width: 768px) {
+  img[src$=".svg"] {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  img[src$=".svg"] {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Smaller screens - decrease size */
+@media (max-width: 480px) {
+  img[src$=".svg"] {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* Responsive rules for medium screens (tablets) */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.7em;
+        /* Slightly smaller font for tablets */
+        line-height: 1.5;
+        /* Adjust line height for readability */
+    }
+}
+
+/* Responsive rules for small screens (mobile devices) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.65em;
+        /* Further reduced font size for mobiles */
+        line-height: 1.4;
+        /* More compact line height */
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+}
+

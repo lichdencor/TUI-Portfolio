@@ -1,0 +1,56 @@
+button {
+  all: unset;
+  font-family: 'Press Start 2P', monospace;
+  color: #00ff00;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
+  text-align: center;
+}
+
+.btn {
+  all: unset;
+  font-family: 'Press Start 2P', monospace;
+  color: #00ff00;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-align: center;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  font-family: 'Press Start 2P', monospace;
+  color: #00ff00;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+nav a button {
+  all: unset;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border: none; /* remove border completely */
+  display: inline-block;
+}
+
+/* Remove hover and active styles */
+nav a.active button,
+nav a button:hover {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+

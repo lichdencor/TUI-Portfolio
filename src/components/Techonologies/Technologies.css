@@ -1,0 +1,58 @@
+
+.tech-item {
+  display: flex; /* not inline-flex */
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 4px; /* optional */
+}
+
+.tech-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block; /* remove any inline gap/space */
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.tech-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Pequeñas pantallas */
+@media (max-width: 480px) {
+  .tech-item {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 768px) {
+  .tech-item {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .tech-item {
+    width: 48px;
+    height: 48px;
+  }
+}
+
