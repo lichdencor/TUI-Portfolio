@@ -1,7 +1,8 @@
 .particular {
   display: flex;
+  flex-wrap: wrap; /* allow content to wrap on small screens */
   align-items: center;
-  gap: 8px; /* espaciado entre el label y el valor */
+  gap: 8px;
   margin-bottom: 8px;
 }
 
@@ -63,4 +64,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .particular h3 {
+    font-size: 0.6rem;
+  }
+  .particular p {
+    font-size: 0.5rem;
+  }
+}
 

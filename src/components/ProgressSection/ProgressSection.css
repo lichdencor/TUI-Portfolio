@@ -68,3 +68,22 @@
   }
 }
 
+.progress-ability-container {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+/* Responsive grid for better layout */
+@media (min-width: 768px) {
+  .progress-bar-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+  }
+}
+

@@ -32,6 +32,13 @@
   display: block;
 }
 
+.tech-icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
 /* Pequeñas pantallas */
 @media (max-width: 480px) {
   .tech-item {

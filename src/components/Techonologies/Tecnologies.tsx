@@ -51,7 +51,7 @@ export const Technologies = () => {
           {Object.entries(categories).map(([category, techs]) => (
             <div key={category} className="row">
               <h3>{category}</h3>
-              <div className="row">
+              <div className="tech-icon-row">
                 {techs.map((tech) => (
                   <a
                     key={tech}
