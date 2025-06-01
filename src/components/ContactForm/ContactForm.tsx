@@ -1,22 +1,34 @@
 import { useState } from "react";
-import { Button } from "../../components/"; // Adjust path if needed
+import { Button } from "../../components/"; // Ajusta si es necesario
 import "./ContactForm.css";
 
 export const ContactForm = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    fetch("/", {
-      method: "POST",
-      body: data,
-    })
-      .then(() => setShowModal(true))
-      .catch((error) => alert("Form submission error: " + error.message));
+    // Codificamos los datos en formato que Netlify espera
+    const encoded = new URLSearchParams();
+    data.forEach((value, key) => {
+      encoded.append(key, value.toString());
+    });
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded.toString(),
+      });
+
+      setShowModal(true);
+      form.reset();
+    } catch (error: any) {
+      alert("Form submission error: " + error.message);
+    }
   };
 
   return (
@@ -29,8 +41,9 @@ export const ContactForm = () => {
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
+
         >
-          {/* Required by Netlify for form detection */}
+          {/* Requerido para que Netlify reconozca el formulario */}
           <input type="hidden" name="form-name" value="contact" />
 
           <div className="form-group">
@@ -74,4 +87,5 @@ export const ContactForm = () => {
     </>
   );
 };
+
 

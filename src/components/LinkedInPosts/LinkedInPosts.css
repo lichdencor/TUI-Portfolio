@@ -1,0 +1,180 @@
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+.my-swiper {
+  max-width: 420px;
+  width: 80%;
+  margin: 0 auto;
+  overflow: visible; /* so rotated slides show shadows */
+}
+
+/* Reducir ancho en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .my-swiper {
+    max-width: 280px;
+    width: 90vw;
+  }
+}
+
+/* Añadir padding horizontal para que las slides no queden pegadas */
+.my-swiper-slide {
+  width: 100% !important; /* fill swiper container */
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+/* Card */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfcfc;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  margin: 15px auto;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container */
+.post-card-image {
+  margin: 10px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 300px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Content */
+.post-card-content {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.post-card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+
+.post-card-content .date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.post-card-content .summary {
+  flex-grow: 1;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.post-card-content a {
+  font-size: 0.875rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.post-card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+/* Hide image on very small screens under 480px */
+@media (max-width: 480px) {
+  .post-card-image {
+    display: none;
+  }
+  
+  .post-card-content {
+    padding: 1rem;
+  }
+  
+  .post-card-content h2 {
+    font-size: 1.1rem;
+  }
+  
+  .post-card-content .summary {
+    font-size: 0.9rem;
+  }
+  
+  .post-card {
+    max-width: 70vw;
+    margin: 10px auto;
+  }
+}
+
+/* Mobile up to 640px */
+@media (max-width: 640px) {
+  .post-card {
+    max-width: 90vw;
+  }
+
+  .post-card-content {
+    padding: 1rem;
+  }
+
+  .post-card-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .post-card-content .summary {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large screens FullHD+ */
+@media (min-width: 1920px) {
+  .post-card {
+    max-width: 500px;
+  }
+
+  .post-card-content {
+    padding: 2.5rem;
+  }
+
+  .post-card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-card-content .summary {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: smaller swiper nav buttons on small screens */
+@media (max-width: 480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+  }
+}
+

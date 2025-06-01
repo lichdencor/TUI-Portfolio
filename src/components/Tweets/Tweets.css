@@ -1,0 +1,89 @@
+.tweet-list {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  gap: 0.75rem; /* Espaciado vertical entre tweets */
+}
+
+.tweet-wrapper {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+    margin: 0 !important;
+  padding: 0 !important;
+  /* margin-bottom: 1rem;  <-- quitalo si existe */
+}
+
+.tweet-wrapper iframe {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+
+
+@media (max-width: 480px) {
+  .tweet-wrapper {
+    padding: 0 1rem;
+    transform: none;
+  }
+
+  .tweet-wrapper > * {
+    width: 100% !important;
+  }
+
+    .tweet-list {
+    gap: 0.25rem; /* menos espacio vertical entre tweets */
+  }
+}
+
+
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px; /* ensures space is reserved */
+  color: #00ff00;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+}
+
+.spinner::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border: 3px solid transparent;
+  border-top: 3px solid #00ff00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.retry-button {
+  background-color: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+}
+
+.retry-button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
