@@ -10,7 +10,7 @@ const redis = new Redis({
 });
 
 const CACHE_KEY = "tweets_cache_v2";
-const CACHE_TTL = 3600; // 1 hour (seconds)
+const CACHE_TTL = 3600;
 
 function logDebug(message) {
   const timestamp = new Date().toISOString();

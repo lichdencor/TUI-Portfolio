@@ -1,3 +1,4 @@
+// src/components/Tweets.tsx
 import { useEffect, useState } from "react";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import "./Tweets.css";
