@@ -1,6 +1,5 @@
-// netlify/functions/getTweets.js
-import { Redis } from "@upstash/redis";
-import fetch from "node-fetch";
+const { Redis } = require("@upstash/redis");
+const fetch = require("node-fetch");
 
 const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
 const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
@@ -43,7 +42,7 @@ async function setCache(data) {
   }
 }
 
-export async function handler(event, context) {
+exports.handler = async function (event, context) {
   const BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN;
   if (!BEARER_TOKEN) {
     logDebug("Missing TWITTER_BEARER_TOKEN");
@@ -116,5 +115,5 @@ export async function handler(event, context) {
       body: JSON.stringify({ error: error.message }),
     };
   }
-}
+};
 
