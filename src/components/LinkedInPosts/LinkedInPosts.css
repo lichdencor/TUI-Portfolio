@@ -3,7 +3,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 .my-swiper {
-  max-width: 420px;
+  max-width: 320px;
   width: 80%;
   margin: 0 auto;
   overflow: visible; /* so rotated slides show shadows */
@@ -23,7 +23,7 @@ import "swiper/css/navigation";
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 8px;
+  padding: 0 2px;
 }
 
 /* Card */
@@ -39,7 +39,7 @@ import "swiper/css/navigation";
   transition: box-shadow 0.2s ease;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
   box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@ import "swiper/css/navigation";
 .post-card-image {
   margin: 10px;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   max-height: 300px;
   overflow: hidden;
   box-sizing: border-box;
