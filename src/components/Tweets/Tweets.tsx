@@ -1,7 +1,7 @@
 // src/components/Tweets.tsx
 import { useEffect, useState } from "react";
-import { TwitterTweetEmbed } from "react-twitter-embed";
 import "./Tweets.css";
+import TweetEmbed from "react-tweet-embed";
 
 interface TweetData {
   id: string;
@@ -57,7 +57,7 @@ export const Tweets = () => {
       ) : (
         tweetIds.map((id) => (
           <div key={id} className="tweet-wrapper" style={{ marginBottom: "1rem" }}>
-            <TwitterTweetEmbed tweetId={id} />
+            <TweetEmbed tweetId={id} />
           </div>
         ))
       )}
